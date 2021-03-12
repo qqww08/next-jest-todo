@@ -2,6 +2,7 @@ require("dotenv").config();
 const withBundleAnalyzer = require("@zeit/next-bundle-analyzer");
 const withFonts = require("next-fonts");
 const CompressionPlugin = require("compression-webpack-plugin");
+const webpack = require('webpack')
 
 module.exports = withBundleAnalyzer(
   withFonts({
