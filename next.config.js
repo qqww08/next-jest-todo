@@ -9,14 +9,14 @@ const nextConfig = {
     webpack5: true,
   },
   // url rewrite
-  async rewrites() {
-    return [
-      {
-        source: "/api/:path*",
-        destination: `${process.env.BASE_URL}/:path*`,
-      },
-    ];
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: "/api/:path*",
+  //       destination: `${process.env.BASE_URL}/:path*`,
+  //     },
+  //   ];
+  // },
   compress: true,
   webpack: (config, options) => {
     config.module.rules.push({

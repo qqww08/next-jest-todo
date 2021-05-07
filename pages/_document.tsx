@@ -28,10 +28,11 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <head />
+        <Head />
         <body>
           <Main />
           <NextScript />
+          <div id="__portal" />
         </body>
       </Html>
     );
