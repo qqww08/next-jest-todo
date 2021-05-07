@@ -31,9 +31,11 @@
     "@types/styled-components": "^5.1.4",
     "@typescript-eslint/eslint-plugin": "^4.6.1",
     "@typescript-eslint/parser": "^4.6.1",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
     "babel-plugin-import": "^1.13.1",
     "babel-plugin-styled-components": "^1.11.1",
     "compression-webpack-plugin": "^6.0.5",
+    "core-js": "^3.12.0",
     "cross-env": "^7.0.2",
     "dotenv": "^8.2.0",
     "eslint": "^7.13.0",
@@ -46,12 +48,15 @@
     "next-fonts": "^1.4.0",
     "next-redux-saga": "^4.0.2",
     "next-redux-wrapper": "^4.0.1",
+    "object-assign": "^4.1.1",
     "prettier": "^2.1.2",
     "react-hooks": "^1.0.1",
     "react-sizes": "^2.0.0",
     "redux-devtools-extension": "^2.13.8",
     "typescript": "^4.0.5",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "url-polyfill": "^1.1.12",
+    "whatwg-fetch": "^3.6.2"
   }
 }

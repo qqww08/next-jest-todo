@@ -28,6 +28,19 @@ const nextConfig = {
         },
       },
     });
+    const originalEntry = config.entry;
+    config.entry = async () => {
+      const entries = await originalEntry();
+
+      if (
+        entries["main.js"] &&
+        !entries["main.js"].includes("./utils/polyfill.js")
+      ) {
+        entries["main.js"].unshift("./utils/polyfill.js");
+      }
+
+      return entries;
+    };
     config.experiments = {};
     return config;
   },
