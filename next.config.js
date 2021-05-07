@@ -4,8 +4,18 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const nextConfig = {
+  // webpack5 enable
   future: {
     webpack5: true,
+  },
+  // url rewrite
+  async rewrites() {
+    return [
+      {
+        source: "/api/:path*",
+        destination: `${process.env.BASE_URL}/:path*`,
+      },
+    ];
   },
   compress: true,
   webpack: (config, options) => {

@@ -1,7 +1,7 @@
 #NextJS Boilerplate
 
 Features
-- nextjs 10,
+- nextjs 10.2,
 - typescript,
 - redux,
 - redux-saga,
@@ -11,7 +11,7 @@ Features
 - eslint,
 - js-cookie,
 - webpack
-- webpack Compression 
+ 
 
 Feature/scss
 - scss
