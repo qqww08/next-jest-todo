@@ -50,5 +50,6 @@ module.exports = {
     "no-console": 1,
     "import/no-unresolved": 0,
     "@typescript-eslint/no-var-requires": "off",
+    "react/react-in-jsx-scope": "off",
   },
 };
