@@ -20,7 +20,7 @@ const NextI18NextInstance = new NextI18Next({
   defaultNS: "common",
   keySeparator: "###",
   localePath: path.resolve("./public/locales"),
-  otherLanguages: ["zh"],
+  otherLanguages: ["zh", "en"],
   use,
 });
 
