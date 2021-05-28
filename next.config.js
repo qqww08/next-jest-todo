@@ -1,8 +1,12 @@
+require("dotenv").config();
 const withPlugins = require("next-compose-plugins");
 const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
-
+const localeSubpaths = {
+  zh: "zh",
+  ko: "ko",
+};
 const nextConfig = {
   // webpack5 enable
   future: {
@@ -18,6 +22,9 @@ const nextConfig = {
   //   ];
   // },
   compress: true,
+  publicRuntimeConfig: {
+    localeSubpaths,
+  },
   webpack: (config, options) => {
     config.module.rules.push({
       test: /\.(png|jpg|gif|svg|eot|ttf|woff|woff2|ico)$/,
