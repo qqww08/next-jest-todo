@@ -1,7 +1,7 @@
 #NextJS Boilerplate
 
 Features
-- nextjs 10.2,
+- nextjs 11.1.2,
 - typescript,
 - redux,
 - redux-saga,

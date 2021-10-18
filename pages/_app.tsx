@@ -1,11 +1,11 @@
 import { Provider } from "react-redux";
 import withRedux from "next-redux-wrapper";
 import withReduxSaga from "next-redux-saga";
+import { AppProps } from "next/app";
 import createStore from "../createStore";
 import GlobalStyles from "../styles/global-styles";
 import { ThemeProvider } from "../styles/themed-components";
 import theme from "../styles/themes";
-import { AppProps } from "next/app";
 import CustomeUI from "~/styles/custome_ui";
 import { appWithTranslation } from "~/utils/i18n";
 
@@ -14,7 +14,6 @@ const store = createStore();
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <Provider store={store}>
-      <CustomeUI />
       <GlobalStyles />
       <ThemeProvider theme={theme}>
         <Component {...pageProps} />

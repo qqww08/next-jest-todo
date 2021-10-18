@@ -1,7 +1,8 @@
 import Axios from "axios";
 
-export const common = {
+const common = {
   test: () => {
     Axios.get(`${process.env.BASE_URL}/api`);
   },
 };
+export default common;

@@ -1,36 +1,20 @@
-import baseStyled, { css, ThemedStyledInterface } from "styled-components";
 // Iterate through the sizes and create a media template
-const sizes = {
-    desktop: 1167,
-    tablet: 778,
-    phone: 576,
-  },
-  media = {
-    desktop: (...args) => undefined,
-    tablet: (...args) => undefined,
-    phone: (...args) => undefined,
-  };
-
-Object.keys(sizes).reduce((acc, label: string) => {
-  acc[label] = (...args) => css`
-    @media (max-width: ${sizes[label]}px) {
-      ${css(args.shift(), ...args)}
-    }
-  `;
-  return acc;
-}, media);
-
-const color = {
-  blue: "#2054ae",
-  pink: "#c43683",
-  black: "#24272a",
+const customMediaQuery = (maxWidth: number): string => {
+  // 최대폭을 입력하면. 문자열을 밷는다!
+  return `@media (max-width: ${maxWidth}px)`;
 };
+// 각 디바이스에 따라 최대폭 값을 변수화
+const media = {
+  desktop: customMediaQuery(922),
+  tablet: customMediaQuery(768),
+  phone: customMediaQuery(576),
+};
+
+const color = {};
 
 const themes = {
   color,
   media,
 };
 
-export type Theme = typeof themes;
-export const styled = baseStyled as ThemedStyledInterface<Theme>;
 export default themes;
