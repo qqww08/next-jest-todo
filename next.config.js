@@ -4,25 +4,13 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-const localeSubpaths = {
-  zh: "zh",
-  ko: "ko",
-};
 const nextConfig = {
-  // url rewrite
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: "/api/:path*",
-  //       destination: `${process.env.BASE_URL}/:path*`,
-  //     },
-  //   ];
-  // },
-  compress: true,
-  publicRuntimeConfig: {
-    localeSubpaths,
+  swcMinify: true,
+  experimental: {
+    // Enables the styled-components SWC transform
+    styledComponents: true,
   },
-  webpack: (config, options) => {
+  webpack(config) {
     return config;
   },
 };

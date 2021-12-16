@@ -19,13 +19,26 @@
     "jsx": "preserve",
     "baseUrl": "./",
     "paths": {
-      "~/*": ["*"],
-      "interface": ["interface/*"],
-      "pages": ["pages/*"],
-      "store": ["store/*"],
-      "styles": ["styles/*"],
-      "utils": ["utils/*"]
-    }
+      "~/*": [
+        "*"
+      ],
+      "interface": [
+        "interface/*"
+      ],
+      "pages": [
+        "pages/*"
+      ],
+      "store": [
+        "store/*"
+      ],
+      "styles": [
+        "styles/*"
+      ],
+      "utils": [
+        "utils/*"
+      ]
+    },
+    "incremental": true
   },
   "exclude": [
     "node_modules"

@@ -1,29 +1,29 @@
-import { applyMiddleware, createStore, Middleware, StoreEnhancer } from "redux";
-import createSagaMiddleware from "redux-saga";
-import rootReducer, { initialState } from "~/rootReducer";
-import rootSaga from "~/rootSaga";
-import { WithSagaTaskStore } from "~/interfaces";
+import { applyMiddleware, compose, createStore, Store } from "redux";
+import createSagaMiddleware, { Task } from "redux-saga";
+import { createWrapper } from "next-redux-wrapper";
+import { composeWithDevTools } from "redux-devtools-extension";
+import rootReducer from "./rootReducer";
+import rootSaga from "./rootSaga";
+import { State } from "./interfaces";
 
-const bindMiddleware = (middleware: Middleware[]): StoreEnhancer => {
-  if (process.env.NODE_ENV !== "production") {
-    // eslint-disable-next-line @typescript-eslint/no-var-requires
-    const { composeWithDevTools } = require("redux-devtools-extension");
-    return composeWithDevTools(applyMiddleware(...middleware));
-  }
-  return applyMiddleware(...middleware);
-};
-
-function configureStore(preloadedState = initialState): WithSagaTaskStore {
-  const sagaMiddleware = createSagaMiddleware();
-  const store: WithSagaTaskStore = createStore(
-    rootReducer,
-    preloadedState,
-    bindMiddleware([sagaMiddleware])
-  );
-
-  store.sagaTask = sagaMiddleware.run(rootSaga);
-
-  return store;
+export interface SagaStore extends Store {
+  sagaTask?: Task;
 }
 
-export default configureStore;
+export const makeStore = (context) => {
+  const sagaMiddleware = createSagaMiddleware();
+  const middlewares = [sagaMiddleware];
+  const enhancer =
+    process.env.NODE_ENV === "production"
+      ? compose(applyMiddleware(...middlewares))
+      : composeWithDevTools(applyMiddleware(...middlewares));
+
+  const store = createStore(rootReducer, enhancer);
+
+  (store as SagaStore).sagaTask = sagaMiddleware.run(rootSaga);
+  return store;
+};
+
+const wrapper = createWrapper<Store<State>>(makeStore, { debug: process.env.NODE_ENV === "development" });
+
+export default wrapper;
