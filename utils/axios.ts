@@ -1,15 +1,6 @@
-import axios from "axios";
-import axiosRetry from "axios-retry";
+import axios from 'axios';
 
 const instance = axios.create({
-    timeout: 30000,
+  timeout: 30000,
 });
-
-axiosRetry(instance, {
-    retries: 1,
-    retryDelay: (retryCount) => {
-        return retryCount * 3000;
-    },
-});
-
 export default instance;

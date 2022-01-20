@@ -1,5 +1,5 @@
-import reset from "styled-reset";
-import { createGlobalStyle, css } from "styled-components";
+import reset from 'styled-reset';
+import { createGlobalStyle, css } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -23,18 +23,6 @@ const GlobalStyle = createGlobalStyle`
   }
   input, textarea{
     user-select: text;
-  }
-  /*********************************/
-  @media only screen and (max-width: 768px) {
-    body {
-      font-size: 12px;
-    }
-  }
-
-  @media only screen and (max-width: 576px) {
-    body {
-      font-size: 10px;
-    }
   }
 `;
 export const OneLine = css`
