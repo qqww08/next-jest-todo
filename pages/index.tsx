@@ -1,9 +1,7 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const Index = () => {
-  return (
-    <__Wrapper>213213a</__Wrapper>
-  );
+  return <__Wrapper>asdsadsa</__Wrapper>;
 };
 
 export default Index;

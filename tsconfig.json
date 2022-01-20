@@ -17,7 +17,7 @@
     "strictBindCallApply": true,
     "rootDir": "./",
     "strict": true,
-    "target": "es5",
+    "target": "es2020",
     "baseUrl": ".",
     "noEmitOnError": true,
     "paths": {
@@ -57,7 +57,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.js"
   ],
   "exclude": [
     "node_modules"
