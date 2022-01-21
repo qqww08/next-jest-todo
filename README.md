@@ -9,3 +9,4 @@ Features
 - prettierrc
 - eslint
 - swc enabled
+- next-bundle-analyzer
