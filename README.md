@@ -1,6 +1,5 @@
 #NextJS Boilerplate
 
-Features
 - nextJS 12.0.7
 - react 17.0.2
 - typescript
@@ -10,3 +9,12 @@ Features
 - eslint
 - swc enabled
 - next-bundle-analyzer
+
+##branch/lib-recoil
+- recoil
+
+##branch/lib-redux
+- redux
+- redux-saga
+- next-redux-wrapper
+- redux-devtools-extension
