@@ -18,3 +18,6 @@
 - redux-saga
 - next-redux-wrapper
 - redux-devtools-extension
+
+##branch/lib-swr
+- swr
