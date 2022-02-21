@@ -1,13 +1,12 @@
 # NextJS Boilerplate
 
-- nextJS 12.0.7
-- react 17.0.2
+- nextJS 12.1.0
+- react 18.0.0-rc.0
 - typescript
 - styled-components
 - axios
 - prettierrc
 - eslint
-- swc enabled
 - next-bundle-analyzer
 
 ##branch/lib-recoil
