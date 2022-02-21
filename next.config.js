@@ -6,13 +6,6 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 
 const nextConfig = {
   swcMinify: true,
-  experimental: {
-    // ssr and displayName are configured by default
-    styledComponents: true,
-  },
-  webpack(config) {
-    return config;
-  },
 };
 
 module.exports = withPlugins([[withBundleAnalyzer]], nextConfig);

@@ -1,4 +1,4 @@
-#NextJS Boilerplate
+# NextJS Boilerplate
 
 - nextJS 12.0.7
 - react 17.0.2
