@@ -7,6 +7,7 @@
   "parser": "@typescript-eslint/parser",
   "extends": [
     "airbnb",
+    "airbnb/hooks",
     "eslint:recommended",
     "plugin:import/errors",
     "plugin:react/recommended",
@@ -24,6 +25,7 @@
   },
   "plugins": ["@typescript-eslint"],
   "rules": {
+    "@next/next/no-document-import-in-page": 0,
     "import/no-unresolved": 0,
     "react/jsx-filename-extension": 0,
     "no-use-before-define": 0,

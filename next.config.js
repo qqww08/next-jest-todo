@@ -5,6 +5,9 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 });
 
 const nextConfig = {
+  images: {
+    domains: ["avatars.githubusercontent.com"],
+  },
   swcMinify: true,
 };
 
