@@ -907,7 +907,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cross-spawn@npm:^7.0.2":
+"cross-env@npm:^7.0.3":
+  version: 7.0.3
+  resolution: "cross-env@npm:7.0.3"
+  dependencies:
+    cross-spawn: ^7.0.1
+  bin:
+    cross-env: src/bin/cross-env.js
+    cross-env-shell: src/bin/cross-env-shell.js
+  checksum: 26f2f3ea2ab32617f57effb70d329c2070d2f5630adc800985d8b30b56e8bf7f5f439dd3a0358b79cee6f930afc23cf8e23515f17ccfb30092c6b62c6b630a79
+  languageName: node
+  linkType: hard
+
+"cross-spawn@npm:^7.0.1, cross-spawn@npm:^7.0.2":
   version: 7.0.3
   resolution: "cross-spawn@npm:7.0.3"
   dependencies:
@@ -956,10 +968,10 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.10.0
     "@typescript-eslint/parser": ^5.10.0
     axios: ^0.20.0
+    cross-env: ^7.0.3
     dotenv: ^8.2.0
     eslint: ^8.7.0
     eslint-config-airbnb: ^19.0.4
-    eslint-config-airbnb-typescript: ^16.1.0
     eslint-config-next: ^12.0.8
     eslint-config-prettier: ^8.3.0
     eslint-plugin-import: ^2.25.3
@@ -971,8 +983,9 @@ __metadata:
     next: ^12.1.0
     next-compose-plugins: ^2.2.1
     prettier: ^2.5.1
-    react: ^18.0.0-rc.0
-    react-dom: ^18.0.0-rc.0
+    react: ^18.0.0-rc.1-next-629036a9c-20220224
+    react-dom: ^18.0.0-rc.1-next-629036a9c-20220224
+    react-is: ^17.0.2
     styled-components: ^5.3.3
     styled-reset: ^4.3.0
     typescript: ^4.5.4
@@ -1145,18 +1158,6 @@ __metadata:
     eslint: ^7.32.0 || ^8.2.0
     eslint-plugin-import: ^2.25.2
   checksum: 38626bad2ce2859fccac86b30cd2b86c9b7d8d71d458331860861dc05290a5b198bded2f4fb89efcb9046ec48f8ab4c4fb00365ba8916f27b172671da28b93ea
-  languageName: node
-  linkType: hard
-
-"eslint-config-airbnb-typescript@npm:^16.1.0":
-  version: 16.1.0
-  resolution: "eslint-config-airbnb-typescript@npm:16.1.0"
-  dependencies:
-    eslint-config-airbnb-base: ^15.0.0
-  peerDependencies:
-    "@typescript-eslint/eslint-plugin": ^5.0.0
-    "@typescript-eslint/parser": ^5.0.0
-  checksum: 65bb6763ab825c228d01c884ddb306001f3b5cbb5c138646f6629ac780acc68d388091844b3983aa9f8f138e4e972a2a1d5a23ce95bd7a217b4a917e4e2366dd
   languageName: node
   linkType: hard
 
@@ -2541,7 +2542,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^18.0.0-rc.0":
+"react-dom@npm:^18.0.0-rc.1-next-629036a9c-20220224":
   version: 18.0.0-rc.1-next-629036a9c-20220224
   resolution: "react-dom@npm:18.0.0-rc.1-next-629036a9c-20220224"
   dependencies:
@@ -2560,7 +2561,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^18.0.0-rc.0":
+"react-is@npm:^17.0.2":
+  version: 17.0.2
+  resolution: "react-is@npm:17.0.2"
+  checksum: 9d6d111d8990dc98bc5402c1266a808b0459b5d54830bbea24c12d908b536df7883f268a7868cfaedde3dd9d4e0d574db456f84d2e6df9c4526f99bb4b5344d8
+  languageName: node
+  linkType: hard
+
+"react@npm:^18.0.0-rc.1-next-629036a9c-20220224":
   version: 18.0.0-rc.1-next-629036a9c-20220224
   resolution: "react@npm:18.0.0-rc.1-next-629036a9c-20220224"
   dependencies:
