@@ -8,6 +8,7 @@
 - prettierrc
 - eslint
 - next-bundle-analyzer
+- yarn berry 3.2.0
 
 ##branch/lib-recoil
 - recoil
@@ -20,3 +21,9 @@
 
 ##branch/lib-swr
 - swr
+
+
+## Using Docker
+Install Docker on your machine.
+1. Build your container: `docker build -t yarn-docker .`
+2. Run your container: `docker run -p 3000:3000  yarn-docker`
