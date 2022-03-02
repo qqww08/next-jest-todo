@@ -1,36 +1,28 @@
-{
-  "env": {
-    "es6": true,
-    "browser": true,
-    "node": true
+module.exports = {
+  env: {
+    es6: true,
+    browser: true,
+    node: true,
   },
-  "parser": "@typescript-eslint/parser",
-  "extends": [
+  parser: "@typescript-eslint/parser",
+  extends: [
     "airbnb",
     "airbnb/hooks",
     "eslint:recommended",
-    "plugin:import/errors",
     "plugin:react/recommended",
-    "plugin:import/warnings",
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
-    "plugin:@next/next/recommended",
-    "prettier"
+    "prettier",
   ],
-  "parserOptions": {
-    "project": ["./tsconfig.json"],
-    "sourceType": "module",
-    "ecmaVersion": 2020
-  },
-  "plugins": ["@typescript-eslint"],
-  "rules": {
+  plugins: ["@typescript-eslint"],
+  rules: {
     "@next/next/no-document-import-in-page": 0,
     "import/no-unresolved": 0,
     "react/jsx-filename-extension": 0,
     "no-use-before-define": 0,
     "@typescript-eslint/no-var-requires": 0,
-    "@typescript-eslint/quotes": [2, "double", { "avoidEscape": true, "allowTemplateLiterals": true }],
+    "@typescript-eslint/quotes": [2, "double", { avoidEscape: true, allowTemplateLiterals: true }],
     "import/no-extraneous-dependencies": 0,
     "func-names": 0,
     "react/jsx-pascal-case": 0,
@@ -41,6 +33,6 @@
     "@typescript-eslint/no-use-before-define": 0,
     "no-underscore-dangle": 0,
     "class-methods-use-this": 0,
-    "react/function-component-definition": [2, { "namedComponents": "arrow-function"}]
-  }
-}
+    "react/function-component-definition": [2, { namedComponents: "arrow-function" }],
+  },
+};

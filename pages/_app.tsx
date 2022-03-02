@@ -10,8 +10,8 @@ interface MyAppProps extends AppProps {
 
 const MyApp = ({ Component, pageProps }: MyAppProps) => {
   return (
-          <ThemeProvider theme={themes}>
-       <Component {...pageProps} />
+    <ThemeProvider theme={themes}>
+      <Component {...pageProps} />
     </ThemeProvider>
   );
 };
