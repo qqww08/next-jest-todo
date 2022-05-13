@@ -13,6 +13,7 @@ module.exports = {
     "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react-hooks/recommended",
+    "next/core-web-vitals",
     "prettier",
   ],
   plugins: ["@typescript-eslint"],

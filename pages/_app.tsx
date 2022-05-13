@@ -1,5 +1,5 @@
-import { AppProps } from "next/app";
-import { NextPageContext } from "next";
+import type { AppProps } from "next/app";
+import type { NextPageContext } from "next";
 import { ThemeProvider } from "styled-components";
 
 import themes from "~/styles/themes";
