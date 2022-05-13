@@ -1,0 +1,20 @@
+{
+  "presets": ["next/babel"],
+  "env": {
+    "production": {
+      "plugins": [
+        "react-remove-properties"
+      ]
+    }
+  },
+  "plugins": [
+    [
+      "babel-plugin-styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ]
+  ]
+}

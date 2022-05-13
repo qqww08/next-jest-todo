@@ -12,7 +12,7 @@ const Main = () => {
   }, []);
 
   // 선택
-  const handleCheckChange = useCallback((id) => {
+  const handleCheckChange = useCallback((id: number) => {
     setTodoValue((prev) => {
       return prev.map((item) => {
         if (item.id === id) {
