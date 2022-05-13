@@ -13,8 +13,7 @@ const GlobalStyle = createGlobalStyle`
     color: inherit;
     text-decoration: none;
   }
-
-  /* 웹앱으로 안에 들어갈시 필수로 넣어야함 */
+  
   input, button {
     padding: 0;
     background-color: transparent;
