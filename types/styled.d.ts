@@ -1,7 +1,7 @@
 // import original module declarations
 import "styled-components";
 
-type TMedia = (maxWidth: number) => string;
+type TMedia = string;
 // and extend them!
 declare module "styled-components" {
   // 우리가 아는 타입지정을 여기서 다해주고 불러서 쓰기

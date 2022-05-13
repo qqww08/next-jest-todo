@@ -1,4 +1,6 @@
 // Iterate through the sizes and create a media template
+import type { DefaultTheme } from "styled-components";
+
 const customMediaQuery = (maxWidth: number): string => {
   // 최대폭을 입력하면. 문자열을 밷는다!
   return `@media (max-width: ${maxWidth}px)`;
@@ -12,7 +14,7 @@ const media = {
 
 const color = {};
 
-const themes = {
+const themes: DefaultTheme = {
   color,
   media,
 };

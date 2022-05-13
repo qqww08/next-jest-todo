@@ -1,19 +1,4 @@
-import styled from "styled-components";
+import TodoList from "~/components/TodoList";
 
-import Link from "next/link";
-
-const Index = () => {
-  return (
-    <__Wrapper>
-      <Link href="/ssr-example">SSR Page</Link>
-      <Link href="/ssg-example">SSG Page</Link>
-    </__Wrapper>
-  );
-};
-
+const Index = () => <TodoList />;
 export default Index;
-
-const __Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-`;

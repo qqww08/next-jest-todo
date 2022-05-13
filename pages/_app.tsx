@@ -3,6 +3,7 @@ import type { NextPageContext } from "next";
 import { ThemeProvider } from "styled-components";
 
 import themes from "~/styles/themes";
+import { RecoilRoot } from "recoil";
 
 interface MyAppProps extends AppProps {
   ctx: NextPageContext;
@@ -10,9 +11,11 @@ interface MyAppProps extends AppProps {
 
 const MyApp = ({ Component, pageProps }: MyAppProps) => {
   return (
-    <ThemeProvider theme={themes}>
-      <Component {...pageProps} />
-    </ThemeProvider>
+    <RecoilRoot>
+      <ThemeProvider theme={themes}>
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </RecoilRoot>
   );
 };
 
